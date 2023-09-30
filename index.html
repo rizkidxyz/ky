@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" title="" type="text/css" />
+  <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbzfIUlQ1XI5o3fUWKaEt91noS81vk8WULQpvsudKHfydLeep5DQRK9L8p8svLd28SXOma3jnoixoBheF2c5owJvvNEcUYydCnrKrZeHcAzTEK4Wj_w3rVP62nfwYSA34T9WHxDmQlEuG0ujhJQ18OmWx7KmSoFm82PFVaeEffl4OlPQRXGUP8OtCNLFw/s1920/20210419_201716.jpg" title="" type="icon" />
+  <title>RIZKID</title>
+  <style type="text/css" media="all">
+    
+    @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+    
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root{
+      --color1: #dff3e3;
+      --color2: #62dd7b;
+      --color3: #040805;
+    }
+    
+    body{
+      background-color: var(--color1);
+      color: var(--color3);
+      transition: .5s ease;
+    }
+    
+    section{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    section>h1{
+      text-align: center;
+      font-size: 40px;
+      transition: .5s ease;
+      margin-bottom: 15px;
+      font-family: 'Caveat Brush', cursive;
+    }
+    
+    .wrapper-card{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .card{
+      width: 130px;
+      aspect-ratio: 1/1;
+      border-radius: 5px;
+      margin: 5px;
+      transition: .5s ease;
+    }
+    
+    .card>a:hover{
+      border-radius: 30px;
+    }
+    
+    .card>a{
+      text-decoration: none;
+      color: var(--color1);
+      background-color: var(--color3);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 8px;
+      transition: .5s ease;
+      font-family: 'Caveat Brush', cursive;
+    }
+    
+    .card>a>i{
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+    
+    button{
+      font-size: 30px;
+      outline: none;
+      border: none;
+      background-color: black;
+      border-radius: 50%;
+      padding: 10px;
+      margin-top: 20px;
+      display: grid;
+      place-items: center;
+      transition: .5s ease;
+    }
+    
+    /* Dark darkMode*/
+    
+    .night{
+      background-color: var(--color3);
+      color: var(--color1);
+      transition: .5s ease;
+    }
+    
+    .night .card>a{
+      color: var(--color3);
+      background-color: var(--color1);
+      transition: .5s ease;
+    }
+    
+    .night button{
+      background-color: white;
+      box-shadow: 0px 0px 10px 5px #fcfcf2;
+      transition: .5s ease;
+    }
+    
+  </style>
+</head>
+<body>
+  <section>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbSrbWBJZhse4hrq_DdxVK1JBK5FqSW9D0jzsbKAQRGgqr3NfGSW5bvM6wj62F7W6nf6vn3Q59h9zFDocSSgN0-Y_C0TBnfWgI3gWkryXFmxHFTGgBCUFPHejNJazNjoB_Daj5XMTyVwmUv0W71_PkPlUvvYuxfh1FNkB7-QMAHuIXVdAa1Fdzd4FtM2c/s720/ppp.gif" alt="" style="aspect-ratio:1/1; width: 80px; border-radius: 50%; border: 2px solid white; margin-bottom: 7px;">
+    <h1>RIZKID</h1>
+    <div class="wrapper-card">
+      <div class="card">
+        <a href="https://sociabuzz.com/kydonasi/tribe">
+          <i class="fas fa-hand-holding-usd"></i>
+          <h1>Donasi</h1>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://chat.whatsapp.com/FA2tY5JHhZ874ArYZOFgwZ">
+          <i class="fa-brands fa-whatsapp"></i>
+          <h1>WhatsApp</h1>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://youtube.com/@RIZKID">
+          <i class="fa-brands fa-youtube"></i>
+          <h1>YouTube</h1>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://t.me/+Wh4Ji3-0xMc1ZGQ1">
+          <i class="fa-brands fa-telegram"></i>
+          <h1>Telegram</h1>
+        </a>
+      </div>
+    </div>
+    <button id="btn" onclick="darkMode()">🌙</button>
+  </section>
+  <script type="text/javascript" charset="utf-8">
+    function darkMode(){
+      const btn = document.getElementById("btn")
+      const dark = document.body
+      dark.classList.toggle("night")
+      
+      if(dark.classList.contains("night")){
+        btn.innerHTML="☀️"
+      }else{
+        btn.innerHTML="🌙"
+      }
+    }
+  </script>
+</body>
+</html>
