@@ -38,11 +38,19 @@
       flex-direction: column;
     }
     
-    section>h1{
+    .wrap{
+      display: flex;
+      height: 70px;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+    }
+    
+    section>.wrap>h1{
       text-align: center;
       font-size: 40px;
       transition: .5s ease;
-      margin-bottom: 15px;
+      margin-bottom: 0px;
       font-family: 'Caveat Brush', cursive;
     }
     
@@ -86,19 +94,17 @@
     }
     
     button{
-      font-size: 30px;
+      font-size: 20px;
       outline: none;
       border: none;
       background-color: black;
       border-radius: 50%;
-      padding: 10px;
-      margin-top: 20px;
+      padding: 7px;
+      margin-left: 30px;
       display: grid;
       place-items: center;
       transition: .5s ease;
     }
-    
-    /* Dark darkMode*/
     
     .night{
       background-color: var(--color3);
@@ -114,7 +120,6 @@
     
     .night button{
       background-color: white;
-      box-shadow: 0px 0px 10px 5px #fcfcf2;
       transition: .5s ease;
     }
     
@@ -122,8 +127,13 @@
 </head>
 <body>
   <section>
+    <span>
     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbSrbWBJZhse4hrq_DdxVK1JBK5FqSW9D0jzsbKAQRGgqr3NfGSW5bvM6wj62F7W6nf6vn3Q59h9zFDocSSgN0-Y_C0TBnfWgI3gWkryXFmxHFTGgBCUFPHejNJazNjoB_Daj5XMTyVwmUv0W71_PkPlUvvYuxfh1FNkB7-QMAHuIXVdAa1Fdzd4FtM2c/s720/ppp.gif" alt="" style="aspect-ratio:1/1; width: 80px; border-radius: 50%; border: 2px solid white; margin-bottom: 7px;">
+    </span>
+    <div class="wrap">
     <h1>RIZKID</h1>
+    <button id="btn" onclick="darkMode()">🌙</button>
+    </div>
     <div class="wrapper-card">
       <div class="card">
         <a href="https://sociabuzz.com/kydonasi/tribe">
@@ -149,8 +159,19 @@
           <h1>Telegram</h1>
         </a>
       </div>
+      <div class="card">
+        <a href="https://rizkidml.blogspot.com/">
+          <i class="fa-brands fa-blogger"></i>
+          <h1>Blogspot</h1>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://instagram.com/rizkid_id?igshid=MzRlODBiNWFlZA==">
+          <i class="fa-brands fa-instagram"></i>
+          <h1>Telegram</h1>
+        </a>
+      </div>
     </div>
-    <button id="btn" onclick="darkMode()">🌙</button>
   </section>
   <script type="text/javascript" charset="utf-8">
     function darkMode(){
